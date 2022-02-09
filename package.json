@@ -33,6 +33,9 @@
     "tracer": "^1.1.5",
     "webkit": "0.0.0"
   },
+  "engines": {
+    "node": ">=14 <15"
+  },
   "pkg": {
     "assets": "node_modules/puppeteer-extra-plugin-stealth/evasions/**/*.*"
   },
