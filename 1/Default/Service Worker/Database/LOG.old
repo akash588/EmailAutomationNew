@@ -1,2 +1,3 @@
-2022/02/09-10:46:48.065 13dc Creating DB E:\git repository\EmailAutomationNew\1\Default\Service Worker\Database since it was missing.
-2022/02/09-10:46:48.248 13dc Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\Service Worker\Database/MANIFEST-000001
+2022/02/09-14:05:36.780 3fac Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\Service Worker\Database/MANIFEST-000001
+2022/02/09-14:05:36.781 3fac Recovering log #3
+2022/02/09-14:05:36.782 3fac Reusing old log E:\git repository\EmailAutomationNew\1\Default\Service Worker\Database/000003.log 
