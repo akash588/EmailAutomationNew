@@ -59,8 +59,8 @@ const gmailProcess = async () => {
     ];
 
     const lauchoptions = {
-      executablePath:
-        "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      // executablePath:
+      //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
       args,
       userDataDir: sessionData,
       headless: false,
