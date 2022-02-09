@@ -70,7 +70,7 @@ app.listen(port, async () => {
   // require('./yahoo')();
 });
 
-process.env.DEBUG = "pw:browser*";
+// process.env.DEBUG = "pw:browser*";
 
 // schedule.scheduleJob("20 * * * *", function () {
 //   //initTask();
@@ -90,33 +90,33 @@ process.env.DEBUG = "pw:browser*";
 //   }
 // }
 
-process.on("unhandledRejection", (error) => {
-  // Will print "unhandledRejection err is not defined"
-  console.log("unhandledRejection", error.message);
-});
+// process.on("unhandledRejection", (error) => {
+//   // Will print "unhandledRejection err is not defined"
+//   console.log("unhandledRejection", error.message);
+// });
 
-process.on("uncaughtException", (error) => {
-  // Will print "unhandledRejection err is not defined"
-  console.log("uncaughtException", error.message);
-});
+// process.on("uncaughtException", (error) => {
+//   // Will print "unhandledRejection err is not defined"
+//   console.log("uncaughtException", error.message);
+// });
 
-process.on("exit", (code) => {
-  console.log(`About to exit with code: ${code}`);
-});
+// process.on("exit", (code) => {
+//   console.log(`About to exit with code: ${code}`);
+// });
 
-process.on("SIGKILL", function (code) {
-  console.log("SIGKILL received...", code);
-});
+// process.on("SIGKILL", function (code) {
+//   console.log("SIGKILL received...", code);
+// });
 
-process.once("SIGINT", function (code) {
-  console.log("SIGINT received...", code);
-});
+// process.once("SIGINT", function (code) {
+//   console.log("SIGINT received...", code);
+// });
 
-// vs.
+// // vs.
 
-process.once("SIGTERM", function (code) {
-  console.log("SIGTERM received...", code);
-});
+// process.once("SIGTERM", function (code) {
+//   console.log("SIGTERM received...", code);
+// });
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
