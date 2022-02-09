@@ -56,6 +56,7 @@ const gmailProcess = async () => {
       "--disable-renderer-backgrounding",
       "--disable-backgrounding-occluded-windows",
       "--disable-ipc-flooding-protection",
+      'disable-extensions',
     ];
 
     const lauchoptions = {
