@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    // "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-    // "dev:debug": "node --inspect app.js",
-    // "debug": "start node-inspector --web-port=8081&&set node index.js --debug"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev:debug": "node --inspect app.js",
+    "debug": "start node-inspector --web-port=8081&&set node index.js --debug"
   },
   "author": "",
   "license": "ISC",
