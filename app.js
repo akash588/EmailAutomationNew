@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const schedule = require("node-schedule");
+// const schedule = require("node-schedule");
 var osu = require("node-os-utils");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -72,9 +72,9 @@ app.listen(port, async () => {
 
 process.env.DEBUG = "pw:browser*";
 
-schedule.scheduleJob("20 * * * *", function () {
-  //initTask();
-});
+// schedule.scheduleJob("20 * * * *", function () {
+//   //initTask();
+// });
 
 // const initTask = async function () {
 //   for (let bkCount = 0; bkCount < config.backlinks.length; bkCount++) {
