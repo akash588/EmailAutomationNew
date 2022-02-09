@@ -42,30 +42,30 @@ const gmailProcess = async () => {
   try {
     const sessionData = `1`;
 
-    const args = [
-      // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      // "--disable-infobars",
-      // "--window-position=0,0",
-      "--ignore-certifcate-errors",
-      "--ignore-certifcate-errors-spki-list",
-    //   "--disable-gpu",
-    //  "--disable-dev-shm-usage",
-      // "--use-gl=egl",
-      "--disable-background-timer-throttling",
-      "--enable-automation",
-      "--disable-renderer-backgrounding",
-      "--disable-backgrounding-occluded-windows",
-      // "--disable-ipc-flooding-protection",
-      // 'disable-extensions',
-    ];
+    // const args = [
+    //   // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
+    //   "--no-sandbox",
+    //   "--disable-setuid-sandbox",
+    //   // "--disable-infobars",
+    //   // "--window-position=0,0",
+    //   "--ignore-certifcate-errors",
+    //   "--ignore-certifcate-errors-spki-list",
+    // //   "--disable-gpu",
+    // //  "--disable-dev-shm-usage",
+    //   // "--use-gl=egl",
+    //   "--disable-background-timer-throttling",
+    //   "--enable-automation",
+    //   "--disable-renderer-backgrounding",
+    //   "--disable-backgrounding-occluded-windows",
+    //   // "--disable-ipc-flooding-protection",
+    //   // 'disable-extensions',
+    // ];
 
     const lauchoptions = {
       // executablePath:
       //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
       // executablePath: '/usr/bin/chromium-browser',
-      args,
+      // args,
       userDataDir: sessionData,
       headless: false,
       devtools: false,
@@ -73,11 +73,11 @@ const gmailProcess = async () => {
       // slowMo: 100
     };
 
-    const width = 1024;
-    const height = 1600;
+    // const width = 1024;
+    // const height = 1600;
 
     const browser = await puppeteer.launch(lauchoptions, {
-      defaultViewport: { width: width, height: height },
+      // defaultViewport: { width: width, height: height },
     });
     //  const page = await browser.newPage();
     const page = (await browser.pages())[0];
