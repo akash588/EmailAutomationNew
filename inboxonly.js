@@ -50,18 +50,21 @@ const gmailProcess = async () => {
       "--window-position=0,0",
       "--ignore-certifcate-errors",
       "--ignore-certifcate-errors-spki-list",
-      "--use-gl=egl",
+      "--disable-gpu",
+     "--disable-dev-shm-usage",
+      // "--use-gl=egl",
       "--disable-background-timer-throttling",
       "--enable-automation",
       "--disable-renderer-backgrounding",
       "--disable-backgrounding-occluded-windows",
       "--disable-ipc-flooding-protection",
-      'disable-extensions',
+      // 'disable-extensions',
     ];
 
     const lauchoptions = {
       // executablePath:
       //   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      // executablePath: '/usr/bin/chromium-browser',
       args,
       userDataDir: sessionData,
       headless: false,
