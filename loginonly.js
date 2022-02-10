@@ -53,7 +53,7 @@ const gmailProcess = async() => {
     // try{
     //   const proxy = `${item.proxyUsername}:${item.proxyPassword}@${item.proxyIP}:${item.proxyPort}`; 
     //   proxy_check(proxy)
-    const sessionData = `1`;
+    const sessionData = `2`;
    
       const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
