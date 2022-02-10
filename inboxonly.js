@@ -48,7 +48,7 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-    const sessionData = `1`;
+    const sessionData = `./1`;
 
     const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
