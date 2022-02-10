@@ -75,7 +75,7 @@ const gmailProcess = async () => {
       // executablePath: '/usr/bin/chromium-browser',
       args,
       userDataDir: sessionData,
-      headless: true,
+      headless: false,
       devtools: false,
       ignoreHTTPSErrors: true,
       // slowMo: 100
