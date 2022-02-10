@@ -4,6 +4,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const utils = require("./utils.js");
 var fs = require("fs");
 const Xvfb = require('xvfb');
+var nodemailer = require('nodemailer');
 
 var logger = require("tracer").console({
   transport: function (data) {
@@ -129,6 +130,48 @@ const gmailProcess = async () => {
           waituntil: "domcontentloaded",
         });
 
+        const  screenshot = await page.screenshot({path: 'inbox.png', fullPage: true});
+    // await page.screenshot({ path: screenshot })
+  
+ 
+    
+
+// var imageAsBase64 = fs.readFileSync('test.png', 'base64');
+// //         // console.log('See screen shot: ' + imageAsBase64)    
+
+// //       const img = fs.writeFile("out.png", imageAsBase64, 'base64', function(err) {
+// //             console.log(err);
+// //           });
+//         //   console.log(screenshot)
+// const imgstr = 'test.png'
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'dummyE934@gmail.com',
+              pass: 'sample@123'
+            }
+          });
+          
+          var mailOptions = {
+            from: 'dummyE934@gmail.com',
+            to: 'shelarakash310@gmail.com',
+            subject: 'Sending Email using Node.js',
+            text: 'inbox screeshot!',
+            attachments: [{
+                  // encoded string as an attachment
+                    filename: 'inbox.png',
+                    path: './inbox.png',
+                  }]
+          };
+          
+          transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
         // //Find the iFrame with the URL http://www.allwebco-templates.com/support/
         // const frame = await page.frames().find(f => f.url() === `https://mail.google.com/mail/u/${i-1}/#search/in%3Ainbox+welcome+OR+liberty/FMfcgzGmthmXxmntkRPvnCnWBNrlpkTn`);
         // if(!frame){
