@@ -53,20 +53,20 @@ const gmailProcess = async () => {
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
       "--no-sandbox",
       "--disable-setuid-sandbox",
-      // "--disable-infobars",
-      // "--window-position=0,0",
+      "--disable-infobars",
+      "--window-position=0,0",
       "--ignore-certifcate-errors",
       "--ignore-certifcate-errors-spki-list",
-    //   "--disable-gpu",
-    //  "--disable-dev-shm-usage",
-      // "--use-gl=egl",
+      "--disable-gpu",
+     "--disable-dev-shm-usage",
+      "--use-gl=egl",
       "--disable-background-timer-throttling",
       "--enable-automation",
       "--disable-renderer-backgrounding",
       "--disable-backgrounding-occluded-windows",
-     "--use-gl=swiftshader"
-      // "--disable-ipc-flooding-protection",
-      // 'disable-extensions',
+     "--use-gl=swiftshader",
+      "--disable-ipc-flooding-protection",
+        'disable-extensions',
     ];
 
     const lauchoptions = {
