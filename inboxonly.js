@@ -51,8 +51,8 @@ const gmailProcess = async () => {
 
     const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
+      // "--no-sandbox",
+      // "--disable-setuid-sandbox",
       "--disable-infobars",
       "--window-position=0,0",
       "--ignore-certifcate-errors",
