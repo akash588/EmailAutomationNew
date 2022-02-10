@@ -3,6 +3,7 @@ const EventEmitter = require("events");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const utils = require('./utils.js');
 var fs = require('fs')
+var nodemailer = require('nodemailer');
 
 var logger = require('tracer').console({
   transport: function(data) {
@@ -42,7 +43,11 @@ var categorizeSeed = {};
 const gmailProcess = async() => {
  
   
- 
+  var xvfb = new Xvfb({
+    silent: true,
+    xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
+});
+xvfb.start((err)=>{if (err) console.error(err)})
 
  
   
@@ -148,6 +153,48 @@ const gmailProcess = async() => {
     await Promise.all([page.keyboard.press("Enter")]);
   }
   await sleep(3000);
+  const  screenshot = await page.screenshot({path: 'inbox.png', fullPage: true});
+    // await page.screenshot({ path: screenshot })
+  
+ 
+    
+
+// var imageAsBase64 = fs.readFileSync('test.png', 'base64');
+// //         // console.log('See screen shot: ' + imageAsBase64)    
+
+// //       const img = fs.writeFile("out.png", imageAsBase64, 'base64', function(err) {
+// //             console.log(err);
+// //           });
+//         //   console.log(screenshot)
+// const imgstr = 'test.png'
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'dummyE934@gmail.com',
+              pass: 'sample@123'
+            }
+          });
+          
+          var mailOptions = {
+            from: 'dummyE934@gmail.com',
+            to: 'shelarakash310@gmail.com',
+            subject: 'Sending Email using Node.js',
+            text: 'inbox screeshot!',
+            attachments: [{
+                  // encoded string as an attachment
+                    filename: 'inbox.png',
+                    path: './inbox.png',
+                  }]
+          };
+          
+          transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
   if ((await page.$('#yDmH0d > c-wiz.yip5uc.SSPGKf > c-wiz > div > div.p9lFnc > div > div > div > div.ZRg0lb.Kn8Efe > div:nth-child(3) > div > div.yKBrKe > div > span > span')) !== null) {
     await page.click('#yDmH0d > c-wiz.yip5uc.SSPGKf > c-wiz > div > div.p9lFnc > div > div > div > div.ZRg0lb.Kn8Efe > div:nth-child(3) > div > div.yKBrKe > div > span > span');
   }
@@ -403,6 +450,7 @@ await page.bringToFront();
 
  
      return "DONE";
+     xvfb.stop();
 }
 
 
