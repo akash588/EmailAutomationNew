@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const loginemail = require("./loginonly");
 const inboxonly = require("./inboxonly");
+const screen = require("./screenshot")
 // const filter = require('./filter');
 // const changePwd = require('./changePwd')
 app.use(cors());
@@ -35,12 +36,12 @@ app.get("/", (req, res) => {
 
 
 
+screen.gmailProcess()
 
 
 
 
-
-// app.post("/start", async (req, res) => {
+app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
   // loginemail.gmailProcess();
@@ -49,7 +50,7 @@ app.get("/", (req, res) => {
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)
   // changePwd.gmailProcess(globaldata)
-// });
+});
 
 app.post("/login", async (req, res) => {
   console.log(req.body);
