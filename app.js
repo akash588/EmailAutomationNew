@@ -39,15 +39,15 @@ app.post("/screenshot", async (req, res) => {
 screen.gmailProcess()
 
 });
-// app.post("/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   loginemail.gmailProcess();
   
-  // });
+  });
 
 
 
 
-app.post("/start", async (req, res) => {
+// app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
   // loginemail.gmailProcess();
@@ -56,7 +56,7 @@ app.post("/start", async (req, res) => {
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)
   // changePwd.gmailProcess(globaldata)
-});
+// });
 
 app.post("/login", async (req, res) => {
   console.log(req.body);
