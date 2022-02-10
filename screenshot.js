@@ -106,7 +106,11 @@ const gmailProcess = async () => {
    const  screenshot = await page.screenshot({path: 'test.png', fullPage: true});
     // await page.screenshot({ path: screenshot })
     await browser.close()
-    console.log('See screen shot: ' + screenshot)
+
+    
+
+var imageAsBase64 = fs.readFileSync('test.png', 'base64');
+    console.log('See screen shot: ' + imageAsBase64)
 
     //   await browser.close();
     // processBrowsers(browser,page)
