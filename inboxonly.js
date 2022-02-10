@@ -3,6 +3,7 @@ const EventEmitter = require("events");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const utils = require("./utils.js");
 var fs = require("fs");
+const Xvfb = require('xvfb');
 
 var logger = require("tracer").console({
   transport: function (data) {
@@ -39,7 +40,13 @@ emitter.setMaxListeners(1000);
 
 var categorizeSeed = {};
 const gmailProcess = async () => {
+
   try {
+    var xvfb = new Xvfb({
+      silent: true,
+      xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
+  });
+  xvfb.start((err)=>{if (err) console.error(err)})
     const sessionData = `1`;
 
     const args = [
@@ -409,6 +416,7 @@ const gmailProcess = async () => {
     //   await browser.close();
     // processBrowsers(browser,page)
     return "DONE";
+    xvfb.stop();
   } catch (ex) {
     console.log(ex);
   }
