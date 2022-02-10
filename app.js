@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 
 
 
-// app.post("/create", async (req, res) => {
+app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
   // loginemail.gmailProcess();
@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)
   // changePwd.gmailProcess(globaldata)
-// });
+});
 
 app.post("/login", async (req, res) => {
   console.log(req.body);
