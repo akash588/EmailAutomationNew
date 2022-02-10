@@ -35,10 +35,10 @@ app.get("/", (req, res) => {
 });
 
 
-app.post("/screenshot", async (req, res) => {
+// app.post("/screenshot", async (req, res) => {
 screen.gmailProcess()
 
-});
+// });
 
 
 

@@ -5,6 +5,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 var fs = require("fs");
 const Xvfb = require('xvfb');
 const path = require('path')
+var nodemailer = require('nodemailer');
 
 var logger = require("tracer").console({
   transport: function (data) {
@@ -105,12 +106,52 @@ const gmailProcess = async () => {
     await page.goto('https://www.walmart.com/ip/Super-Mario-Odyssey-Nintendo-Switch/56011600', { waitUntil: 'networkidle2' })
    const  screenshot = await page.screenshot({path: 'test.png', fullPage: true});
     // await page.screenshot({ path: screenshot })
-    await browser.close()
-
+  
+ 
     
 
 var imageAsBase64 = fs.readFileSync('test.png', 'base64');
-    console.log('See screen shot: ' + imageAsBase64)
+//         // console.log('See screen shot: ' + imageAsBase64)    
+
+//       const img = fs.writeFile("out.png", imageAsBase64, 'base64', function(err) {
+//             console.log(err);
+//           });
+        //   console.log(screenshot)
+const imgstr = 'test.png'
+
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+              user: 'dummyE934@gmail.com',
+              pass: 'sample@123'
+            }
+          });
+          
+          var mailOptions = {
+            from: 'dummyE934@gmail.com',
+            to: 'shelarakash310@gmail.com',
+            subject: 'Sending Email using Node.js',
+            text: 'That was easy in deploy!',
+            attachments: [{
+                  // encoded string as an attachment
+                    filename: 'test.png',
+                    path: './test.png',
+                  }]
+          };
+          
+          transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+              console.log(error);
+            } else {
+              console.log('Email sent: ' + info.response);
+            }
+          });
+
+
+
+          await browser.close()
+      
+        // console.log(Buffer.from(imageAsBase64, 'base64').toString('ascii'))
 
     //   await browser.close();
     // processBrowsers(browser,page)
