@@ -3,6 +3,8 @@ const EventEmitter = require("events");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const utils = require('./utils.js');
 var fs = require('fs')
+
+const Xvfb = require('xvfb');
 var nodemailer = require('nodemailer');
 
 var logger = require('tracer').console({
