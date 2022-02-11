@@ -9,7 +9,7 @@ require("dotenv").config();
 const loginemail = require("./loginonly");
 const inboxonly = require("./inboxonly");
 const screen = require("./screenshot")
-var path = require('path');
+
 // const filter = require('./filter');
 // const changePwd = require('./changePwd')
 app.use(cors());
@@ -51,8 +51,8 @@ app.post("/login", async (req, res) => {
 // app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
-  // loginemail.gmailProcess();
-    inboxonly.gmailProcess();
+  loginemail.gmailProcess();
+    // inboxonly.gmailProcess();
   // filter.filterProcess(globaldata)
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)

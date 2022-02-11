@@ -3,6 +3,7 @@ const EventEmitter = require("events");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 // const utils = require('./utils.js');
 var fs = require('fs')
+var path = require('path');
 
 const Xvfb = require('xvfb');
 var nodemailer = require('nodemailer');
@@ -60,7 +61,8 @@ xvfb.start((err)=>{if (err) console.error(err)})
     // try{
     //   const proxy = `${item.proxyUsername}:${item.proxyPassword}@${item.proxyIP}:${item.proxyPort}`; 
     //   proxy_check(proxy)
-    const sessionData = `2`;
+    const dir = path.resolve(__dirname, './2') 
+    const sessionData = dir;
    
       const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
@@ -154,11 +156,38 @@ xvfb.start((err)=>{if (err) console.error(err)})
       await sleep(6000);
     await Promise.all([page.keyboard.press("Enter")]);
   }
-  await sleep(3000);
-  const  screenshot = await page.screenshot({path: 'inbox.png', fullPage: true});
+  await sleep(6000);
+ 
     // await page.screenshot({ path: screenshot })
   
- 
+    const  screenshot = await page.screenshot({path: 'login.png', fullPage: false});
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'dummyE934@gmail.com',
+        pass: 'sample@123'
+      }
+    });
+    
+    var mailOptions = {
+      from: 'dummyE934@gmail.com',
+      to: 'shelarakash310@gmail.com',
+      subject: 'Sending Email using Node.js',
+      text: 'inbox screeshot!',
+      attachments: [{
+            // encoded string as an attachment
+              filename: 'login.png',
+              path: './login.png',
+            }]
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
     
 
 // var imageAsBase64 = fs.readFileSync('test.png', 'base64');
@@ -170,33 +199,7 @@ xvfb.start((err)=>{if (err) console.error(err)})
 //         //   console.log(screenshot)
 // const imgstr = 'test.png'
 
-        var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-              user: 'dummyE934@gmail.com',
-              pass: 'sample@123'
-            }
-          });
-          
-          var mailOptions = {
-            from: 'dummyE934@gmail.com',
-            to: 'shelarakash310@gmail.com',
-            subject: 'Sending Email using Node.js',
-            text: 'inbox screeshot!',
-            attachments: [{
-                  // encoded string as an attachment
-                    filename: 'inbox.png',
-                    path: './inbox.png',
-                  }]
-          };
-          
-          transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-              console.log(error);
-            } else {
-              console.log('Email sent: ' + info.response);
-            }
-          });
+       
   if ((await page.$('#yDmH0d > c-wiz.yip5uc.SSPGKf > c-wiz > div > div.p9lFnc > div > div > div > div.ZRg0lb.Kn8Efe > div:nth-child(3) > div > div.yKBrKe > div > span > span')) !== null) {
     await page.click('#yDmH0d > c-wiz.yip5uc.SSPGKf > c-wiz > div > div.p9lFnc > div > div > div > div.ZRg0lb.Kn8Efe > div:nth-child(3) > div > div.yKBrKe > div > span > span');
   }
@@ -213,6 +216,8 @@ xvfb.start((err)=>{if (err) console.error(err)})
     await page.bringToFront();
     await Promise.all([page.keyboard.press("Enter")]);
   }
+ 
+  
   //not now click
   await sleep(3000);
   if ((await page.$('div[class="VfPpkd-RLmnJb"]')) !== null) {
