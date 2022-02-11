@@ -5,6 +5,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 var fs = require("fs");
 const Xvfb = require('xvfb');
 var nodemailer = require('nodemailer');
+var path = require('path');
 
 var logger = require("tracer").console({
   transport: function (data) {
@@ -48,8 +49,10 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-    const sessionData = `2`;
-
+ 
+    const sessionData = path.join('1');;
+    // const folderPath = '/1'
+    // fs.readdirSync(folderPath)
     const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
       // "--no-sandbox",
