@@ -49,15 +49,15 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve('./1')
+  const dir = path.resolve('./2')
    
 //  const d = require('path').isAbsolute('./1')
   
-  // const dss = fs.readdirSync(dir)
+  const dss = fs.readdirSync(dir)
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
-    // console.log("a",d
+    console.log("a",dss)
    
 
 // fs.readdirSync(dir).forEach(file => {
@@ -83,7 +83,7 @@ const gmailProcess = async () => {
       "--disable-backgrounding-occluded-windows",
      "--use-gl=swiftshader",
       "--disable-ipc-flooding-protection",
-        'disable-extensions',
+        // 'disable-extensions',
     ];
 
     const lauchoptions = {
