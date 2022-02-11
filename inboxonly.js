@@ -49,7 +49,7 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve('./1')
+  const dir = path.resolve(__dirname, './1') 
    
 //  const d = require('path').isAbsolute('./1')
   
@@ -63,7 +63,7 @@ const gmailProcess = async () => {
 // fs.readdirSync(dir).forEach(file => {
 //   console.log(file);
 // });
-    const sessionData = '~/.1';
+    const sessionData = dir;
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
     const args = [
