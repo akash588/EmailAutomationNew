@@ -49,11 +49,15 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  // const dir = './1'
+  const dir = './1'
    
   
   
   
+
+fs.readdirSync(dir).forEach(file => {
+  console.log(file);
+});
     const sessionData = path.resolve(__dirname, './1') ;
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
