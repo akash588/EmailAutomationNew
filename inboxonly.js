@@ -49,15 +49,15 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve('./2')
+  const dir = path.resolve('./1')
    
 //  const d = require('path').isAbsolute('./1')
   
-  const dss = fs.readdirSync(dir)
+  // const dss = fs.readdirSync(dir)
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
-    console.log("a",dss)
+    // console.log("a",d)
    
 
 // fs.readdirSync(dir).forEach(file => {
@@ -68,7 +68,7 @@ const gmailProcess = async () => {
     // fs.readdirSync(folderPath)
     const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
-      // "--no-sandbox",
+      "--no-sandbox",
       // "--disable-setuid-sandbox",
       "--disable-infobars",
       "--window-position=0,0",
