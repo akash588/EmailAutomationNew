@@ -63,7 +63,7 @@ const gmailProcess = async () => {
 // fs.readdirSync(dir).forEach(file => {
 //   console.log(file);
 // });
-    const sessionData = dir;
+    const sessionData = '~/1';
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
     const args = [
