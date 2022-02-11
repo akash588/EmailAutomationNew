@@ -49,7 +49,7 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve(__dirname, './2') 
+  const dir = path.resolve(__dirname, './Last Browser')
    
 //  const d = require('path').isAbsolute('./1')
   
@@ -142,12 +142,12 @@ fs.readdirSync(dss).forEach(file => {
         // );
         await sleep(9000);
 
-        // await page.goto(`https://mail.google.com/mail/u/${i}/#inbox`, {
-        //   waituntil: "domcontentloaded",
-        // });
-         await page.goto(`chrome://version`, {
-           waituntil: "domcontentloaded", 
-         });
+        await page.goto(`https://mail.google.com/mail/u/${i}/#inbox`, {
+          waituntil: "domcontentloaded",
+        });
+        //  await page.goto(`chrome://version`, {
+        //    waituntil: "domcontentloaded", 
+        //  });
 
         const  screenshot = await page.screenshot({path: 'inbox1.png', fullPage: true});
     // await page.screenshot({ path: screenshot })
