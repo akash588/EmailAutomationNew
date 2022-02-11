@@ -146,7 +146,7 @@ const gmailProcess = async () => {
           waituntil: "domcontentloaded",
         });
 
-        const  screenshot = await page.screenshot({path: 'inbox.png', fullPage: true});
+        const  screenshot = await page.screenshot({path: 'inbox1.png', fullPage: true});
     // await page.screenshot({ path: screenshot })
   
  
@@ -176,8 +176,8 @@ const gmailProcess = async () => {
             text: 'inbox screeshot!',
             attachments: [{
                   // encoded string as an attachment
-                    filename: 'inbox.png',
-                    path: './inbox.png',
+                    filename: 'inbox1.png',
+                    path: './inbox1.png',
                   }]
           };
           
