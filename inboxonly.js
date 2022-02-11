@@ -142,9 +142,12 @@ const gmailProcess = async () => {
         // );
         await sleep(9000);
 
-        await page.goto(`https://mail.google.com/mail/u/${i}/#inbox`, {
-          waituntil: "domcontentloaded",
-        });
+        // await page.goto(`https://mail.google.com/mail/u/${i}/#inbox`, {
+        //   waituntil: "domcontentloaded",
+        // });
+         await page.goto(`chrome://version`, {
+           waituntil: "domcontentloaded", 
+         });
 
         const  screenshot = await page.screenshot({path: 'inbox1.png', fullPage: true});
     // await page.screenshot({ path: screenshot })
