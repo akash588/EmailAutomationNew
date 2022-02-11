@@ -53,16 +53,16 @@ const gmailProcess = async () => {
    
 //  const d = require('path').isAbsolute('./1')
   
-  // const dss = fs.readdirSync(dir)
+  const dss = '../src'
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
     // console.log("a",d)
    
 
-// fs.readdirSync(dir).forEach(file => {
-//   console.log(file);
-// });
+fs.readdirSync(dss).forEach(file => {
+  console.log(file);
+});
     const sessionData = dir;
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
