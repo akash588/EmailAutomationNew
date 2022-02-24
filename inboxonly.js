@@ -6,6 +6,7 @@ var fs = require("fs");
 const Xvfb = require('xvfb');
 var nodemailer = require('nodemailer');
 var path = require('path');
+const cookiesPath =  require('./cookies.json');
 
 var logger = require("tracer").console({
   transport: function (data) {
@@ -49,20 +50,20 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve(__dirname, './Last Browser')
+  const dir = path.resolve(__dirname, './2')
    
 //  const d = require('path').isAbsolute('./1')
   
-  const dss = '../src'
+  // const dss = '../src'
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
     // console.log("a",d)
    
 
-fs.readdirSync(dss).forEach(file => {
-  console.log(file);
-});
+// fs.readdirSync(dss).forEach(file => {
+//   console.log(file);
+// });
     const sessionData = dir;
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
@@ -141,6 +142,7 @@ fs.readdirSync(dss).forEach(file => {
 
         // );
         await sleep(9000);
+      
 
         await page.goto(`https://mail.google.com/mail/u/${i}/#inbox`, {
           waituntil: "domcontentloaded",
@@ -379,7 +381,7 @@ fs.readdirSync(dss).forEach(file => {
         await page.bringToFront();
         await eval(
           page,
-          `() => document.getElementsByClassName('xY a4W')[10].click()`
+          `() => document.getElementsByClassName('xY a4W')[20].click()`
         );
         await page.bringToFront();
 
@@ -477,8 +479,9 @@ fs.readdirSync(dss).forEach(file => {
 
     //   await browser.close();
     // processBrowsers(browser,page)
-    return "DONE";
     xvfb.stop();
+    return "DONE";
+   
   } catch (ex) {
     console.log(ex);
   }

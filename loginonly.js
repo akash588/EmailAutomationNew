@@ -52,7 +52,11 @@ const gmailProcess = async() => {
 });
 xvfb.start((err)=>{if (err) console.error(err)})
 
- 
+var dir1 = './2';
+
+if (!fs.existsSync(dir1)){
+    fs.mkdirSync(dir1);
+}
   
                                                                           
     // const params = { seedNo: index + 1, browserNumber: browserNo }
@@ -188,7 +192,9 @@ xvfb.start((err)=>{if (err) console.error(err)})
         console.log('Email sent: ' + info.response);
       }
     });
-    
+
+
+
 
 // var imageAsBase64 = fs.readFileSync('test.png', 'base64');
 // //         // console.log('See screen shot: ' + imageAsBase64)    
