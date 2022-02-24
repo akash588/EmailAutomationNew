@@ -10,6 +10,7 @@ const loginemail = require("./loginonly");
 const inboxonly = require("./inboxonly");
 const screen = require("./screenshot")
 var fs = require("fs");
+var path = require('path');
 
 // const filter = require('./filter');
 // const changePwd = require('./changePwd')
