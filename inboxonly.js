@@ -59,14 +59,14 @@ const gmailProcess = async () => {
   // path.resolve('/1')
   //   const a = path.dirname(dir)
     // console.log("a",d)
-   
+    const folderPath = './2'
+    fs.readdirSync(folderPath)
 
-fs.readdirSync(dss).forEach(file => {
+fs.readdirSync(folderPath).forEach(file => {
   console.log(file);
 });
     const sessionData = dir;
-    // const folderPath = '/1'
-    // fs.readdirSync(folderPath)
+   
     const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
       "--no-sandbox",

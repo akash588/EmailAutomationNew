@@ -52,11 +52,11 @@ const gmailProcess = async() => {
 });
 xvfb.start((err)=>{if (err) console.error(err)})
 
-var dir1 = './2';
+// var dir1 = './2';
 
-if (!fs.existsSync(dir1)){
-    fs.mkdirSync(dir1);
-}
+// if (!fs.existsSync(dir1)){
+//     fs.mkdirSync(dir1);
+// }
   
                                                                           
     // const params = { seedNo: index + 1, browserNumber: browserNo }
@@ -65,7 +65,7 @@ if (!fs.existsSync(dir1)){
     // try{
     //   const proxy = `${item.proxyUsername}:${item.proxyPassword}@${item.proxyIP}:${item.proxyPort}`; 
     //   proxy_check(proxy)
-    const dir = path.resolve(__dirname, './2') 
+    const dir = path.resolve(__dirname, '2') 
     const sessionData = dir;
    
       const args = [
