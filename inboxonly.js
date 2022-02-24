@@ -193,6 +193,21 @@ fs.readdirSync(folderPath).forEach(file => {
               console.log('Email sent: ' + info.response);
             }
           });
+
+
+          const directoryPath = path.join(__dirname, 'src');
+  //passsing directoryPath and callback function
+  fs.readdir(directoryPath, function (err, files) {
+      //handling error
+      if (err) {
+          return console.log('Unable to scan directory: ' + err);
+      } 
+      //listing all files using forEach
+      files.forEach(function (file) {
+          // Do whatever you want to do with the file
+          console.log(file); 
+      });
+  });
         // //Find the iFrame with the URL http://www.allwebco-templates.com/support/
         // const frame = await page.frames().find(f => f.url() === `https://mail.google.com/mail/u/${i-1}/#search/in%3Ainbox+welcome+OR+liberty/FMfcgzGmthmXxmntkRPvnCnWBNrlpkTn`);
         // if(!frame){
