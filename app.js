@@ -47,7 +47,7 @@ app.post("/login", async (req, res) => {
   
   });
 
-  const directoryPath = path.join(__dirname, ' root');
+  const directoryPath = path.join(__dirname, 'project');
   //passsing directoryPath and callback function
   fs.readdir(directoryPath, function (err, files) {
       //handling error
