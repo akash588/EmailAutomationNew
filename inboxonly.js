@@ -47,23 +47,23 @@ const gmailProcess = async () => {
   try {
     var xvfb = new Xvfb({
       silent: true,
-      xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
+      xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],  
   });
   xvfb.start((err)=>{if (err) console.error(err)})
   const dir = path.resolve(__dirname, '2')
    
 //  const d = require('path').isAbsolute('./1')
   
-  // const dss = '../src'
+  const dss = '../src'
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
     // console.log("a",d)
    
 
-// fs.readdirSync(dss).forEach(file => {
-//   console.log(file);
-// });
+fs.readdirSync(dss).forEach(file => {
+  console.log(file);
+});
     const sessionData = dir;
     // const folderPath = '/1'
     // fs.readdirSync(folderPath)
