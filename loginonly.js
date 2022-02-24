@@ -65,8 +65,9 @@ xvfb.start((err)=>{if (err) console.error(err)})
     // try{
     //   const proxy = `${item.proxyUsername}:${item.proxyPassword}@${item.proxyIP}:${item.proxyPort}`; 
     //   proxy_check(proxy)
-    const dir = path.resolve(__dirname, '2') 
-    const sessionData = dir;
+    const sessionData = `1`;
+    // const dir = path.resolve(__dirname, './2') 
+    // const sessionData = dir;
    
       const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
@@ -192,6 +193,10 @@ xvfb.start((err)=>{if (err) console.error(err)})
         console.log('Email sent: ' + info.response);
       }
     });
+
+
+
+
 
 
 

@@ -46,17 +46,26 @@ app.post("/login", async (req, res) => {
   
   });
 
-  const dss = '../src';
-  fs.readdirSync(dss).forEach(file => {
-    console.log(file);
+  const directoryPath = path.join(__dirname, ' root');
+  //passsing directoryPath and callback function
+  fs.readdir(directoryPath, function (err, files) {
+      //handling error
+      if (err) {
+          return console.log('Unable to scan directory: ' + err);
+      } 
+      //listing all files using forEach
+      files.forEach(function (file) {
+          // Do whatever you want to do with the file
+          console.log(file); 
+      });
   });
 
 
 // app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
-  // loginemail.gmailProcess();
-    inboxonly.gmailProcess();
+  loginemail.gmailProcess();
+    // inboxonly.gmailProcess();
   // filter.filterProcess(globaldata)
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)
