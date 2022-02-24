@@ -50,7 +50,7 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve(__dirname, '/2')
+  const dir = path.resolve(__dirname, '2')
    
 //  const d = require('path').isAbsolute('./1')
   
