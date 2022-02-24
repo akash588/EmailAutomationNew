@@ -1,3 +1,2 @@
-2022/02/11-11:32:36.795 343c Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\Session Storage/MANIFEST-000001
-2022/02/11-11:32:36.798 343c Recovering log #19
-2022/02/11-11:32:36.810 343c Reusing old log E:\git repository\EmailAutomationNew\1\Default\Session Storage/000019.log 
+2022/02/11-16:20:51.243 2a30 Creating DB E:\git repository\EmailAutomationNew\1\Default\Session Storage since it was missing.
+2022/02/11-16:20:51.700 2a30 Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\Session Storage/MANIFEST-000001

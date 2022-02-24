@@ -1,6 +1,0 @@
-2022/02/11-11:32:47.063 19dc Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/02/11-11:32:47.063 19dc Recovering log #4
-2022/02/11-11:32:47.112 19dc Reusing old log E:\git repository\EmailAutomationNew\1\Default\IndexedDB\https_mail.google.com_0.indexeddb.leveldb/000004.log 
-2022/02/11-11:32:52.131 19dc Level-0 table #8: started
-2022/02/11-11:32:52.255 19dc Level-0 table #8: 1905229 bytes OK
-2022/02/11-11:32:52.295 19dc Delete type=0 #4

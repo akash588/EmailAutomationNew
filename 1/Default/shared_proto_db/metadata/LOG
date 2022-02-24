@@ -1,3 +1,2 @@
-2022/02/11-11:32:37.885 3e30 Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\shared_proto_db\metadata/MANIFEST-000001
-2022/02/11-11:32:37.885 3e30 Recovering log #3
-2022/02/11-11:32:37.886 3e30 Reusing old log E:\git repository\EmailAutomationNew\1\Default\shared_proto_db\metadata/000003.log 
+2022/02/11-16:20:50.785 2f5c Creating DB E:\git repository\EmailAutomationNew\1\Default\shared_proto_db\metadata since it was missing.
+2022/02/11-16:20:51.126 2f5c Reusing MANIFEST E:\git repository\EmailAutomationNew\1\Default\shared_proto_db\metadata/MANIFEST-000001
