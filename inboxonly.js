@@ -50,11 +50,11 @@ const gmailProcess = async () => {
       xvfb_args: ["-screen", "0", '1280x720x24', "-ac"],  
   });
   xvfb.start((err)=>{if (err) console.error(err)})
-  const dir = path.resolve(__dirname, '1')
+  const dir = path.resolve(__dirname, '2')
    
 //  const d = require('path').isAbsolute('./1')
   
-  const dss = './1'
+  const dss = '../src'
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
@@ -63,6 +63,13 @@ const gmailProcess = async () => {
     // fs.readdirSync(folderPath)
 
 fs.readdirSync(dss).forEach(file => {
+  if (file == '1'){
+    let sessionread = file
+    fs.readdirSync(sessionread).forEach(se => {
+      console.log("sessionread",se);
+  });
+}
+
   console.log("src",file);
 });
     const sessionData = dir;
