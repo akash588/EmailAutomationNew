@@ -62,8 +62,8 @@ app.post("/login", async (req, res) => {
 // app.post("/start", async (req, res) => {
   // console.log(req.body)
   // const globaldata = req.body;
-  loginemail.gmailProcess();
-    // inboxonly.gmailProcess();
+  // loginemail.gmailProcess();
+    inboxonly.gmailProcess();
   // filter.filterProcess(globaldata)
   // gmailAuto.gmailProcess(globaldata)
   // gmailAutomation.gmailProcess(globaldata)
