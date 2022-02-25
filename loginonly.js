@@ -54,9 +54,9 @@ xvfb.start((err)=>{if (err) console.error(err)})
 
 // var dir1 = './2';
 
-if (!fs.existsSync(dir1)){
-    fs.mkdirSync(dir1);
-}
+// if (!fs.existsSync(dir1)){
+//     fs.mkdirSync(dir1);
+// }
   
                                                                           
     // const params = { seedNo: index + 1, browserNumber: browserNo }
