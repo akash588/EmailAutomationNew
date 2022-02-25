@@ -47,16 +47,16 @@ app.post("/login", async (req, res) => {
   
   });
 
-  const dss = '../project'
+//   const dss = '../project'
 
-  // path.resolve('/1')
-  //   const a = path.dirname(dir)
-    // console.log("a",d)
+//   // path.resolve('/1')
+//   //   const a = path.dirname(dir)
+//     // console.log("a",d)
     
 
-fs.readdirSync(dss).forEach(file => {
-  console.log(file);
-});
+// fs.readdirSync(dss).forEach(file => {
+//   console.log(file);
+// });
 
 
 // app.post("/start", async (req, res) => {
