@@ -59,11 +59,11 @@ const gmailProcess = async () => {
   // path.resolve('/1')
   //   const a = path.dirname(dir)
     // console.log("a",d)
-    const folderPath = './2'
-    fs.readdirSync(folderPath)
+    // const folderPath = './2'
+    // fs.readdirSync(folderPath)
 
-fs.readdirSync(folderPath).forEach(file => {
-  console.log(file);
+fs.readdirSync(dss).forEach(file => {
+  console.log("src",file);
 });
     const sessionData = dir;
    
