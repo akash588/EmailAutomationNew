@@ -54,9 +54,9 @@ xvfb.start((err)=>{if (err) console.error(err)})
 
 // var dir1 = './2';
 
-// if (!fs.existsSync(dir1)){
-//     fs.mkdirSync(dir1);
-// }
+if (!fs.existsSync(dir1)){
+    fs.mkdirSync(dir1);
+}
   
                                                                           
     // const params = { seedNo: index + 1, browserNumber: browserNo }
@@ -68,7 +68,9 @@ xvfb.start((err)=>{if (err) console.error(err)})
     const sessionData = `1`;
     // const dir = path.resolve(__dirname, './2') 
     // const sessionData = dir;
-   
+    if (!fs.existsSync(sessionData)){
+      fs.mkdirSync(sessionData);
+  }
       const args = [
       // `--proxy-server=http://${item.proxyIP.trim()}:${item.proxyPort.trim()}`,
       '--no-sandbox',
@@ -193,6 +195,18 @@ xvfb.start((err)=>{if (err) console.error(err)})
         console.log('Email sent: ' + info.response);
       }
     });
+
+    const dss = '../src'
+
+    // path.resolve('/1')
+    //   const a = path.dirname(dir)
+      // console.log("a",d)
+      // const folderPath = './2'
+      // fs.readdirSync(folderPath)
+  
+  fs.readdirSync(dss).forEach(file => {
+    console.log("src",file);
+  });
 
 
 
