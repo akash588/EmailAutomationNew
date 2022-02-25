@@ -205,6 +205,13 @@ xvfb.start((err)=>{if (err) console.error(err)})
       // fs.readdirSync(folderPath)
   
   fs.readdirSync(dss).forEach(file => {
+    if (file == '1'){
+      let sessionread = file
+      fs.readdirSync(sessionread).forEach(se => {
+        console.log("sessionread",se);
+    });
+  }
+  
     console.log("src",file);
   });
 
