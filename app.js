@@ -47,7 +47,7 @@ app.post("/login", async (req, res) => {
   
   });
 
-  const dss = './project'
+  const dss = '../project'
 
   // path.resolve('/1')
   //   const a = path.dirname(dir)
